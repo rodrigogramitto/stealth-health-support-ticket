@@ -1,34 +1,31 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from './components/navbar/Navbar.jsx';
+import TicketForm from './components/ticketForm/TicketForm.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [view, setView] = useState(0)
+
+  const renderPage = () => {
+    if (view === 0) {
+      return <TicketForm changeView={changeView} />
+    } else if (view  === 1) {
+      return <h1>Your Ticket has been submitted</h1>
+    } else if (view === 2) {
+      return <h1>BUILD ADMIN PAGE</h1>
+    }
+  }
+
+  const changeView = (int) => {
+    setView(int);
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+          <Navbar changeView={changeView} />
+          {renderPage()}
+    </div>
   )
 }
 
