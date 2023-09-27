@@ -63,3 +63,17 @@
 .input {
   margin-left: 1%;
 }
+
+/* admin page */
+
+#ticket-list {
+  margin-top:25%;
+}
+
+.ticket-list-title {
+  margin-left: 0;
+
+}
+.collapse {
+  margin-top: 1%;
+}

@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Navbar from './components/navbar/Navbar.jsx';
 import TicketForm from './components/ticketForm/TicketForm.jsx';
+import AdminPage from './components/adminPage/AdminPage.jsx';
 
 function App() {
   const [view, setView] = useState(0)
@@ -13,7 +14,7 @@ function App() {
     } else if (view  === 1) {
       return <h1>Your Ticket has been submitted</h1>
     } else if (view === 2) {
-      return <h1>BUILD ADMIN PAGE</h1>
+      return <AdminPage />
     }
   }
 
