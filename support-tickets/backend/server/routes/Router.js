@@ -3,14 +3,6 @@ import Controller from '../../db/controller/controller.js';
 
 const Router = express.Router({ megerParams: true });
 
-const testTicket = {
-  name: 'Rodrigo',
-  email: 'rodrigo@rodrigo.com',
-  subject: 'need ticket to save to db',
-  status: 'new',
-  description: 'trying to get my ticketinos to save'
-}
-
 // post ticket route
 Router.post('/ticket', (req, res) => {
   Controller.saveTicket(req.body)
@@ -36,17 +28,36 @@ Router.put('/ticket', (req, res) => {
 
 // get all tickets route
 Router.get('/tickets', (req, res) => {
-  res.send('Get all tickets endpoint');
+  Controller.getTickets()
+    .then((tickets) => {
+      res.send(tickets)
+    })
+    .catch((err) => {
+      res.send(err.data)
+    })
 });
 
 // get one ticket route
 Router.get('/ticket', (req, res) => {
-  res.send('Get ONE Ticket endpoint');
+  Controller.getOneTicket(req.body)
+    .then((ticket) => {
+      res.send(ticket);
+    })
+    .catch((err) => {
+      res.send(err.data)
+    })
 });
 
 // post response route
 Router.post('/response', (req, res) => {
-  res.send('Post response endpoint')
+  console.log(req.body),
+  Controller.saveResponse(req.body)
+    .then((response) => {
+      res.send(response);
+    })
+    .catch((err) => {
+      res.send(err.data)
+    })
 });
 
 export default Router;

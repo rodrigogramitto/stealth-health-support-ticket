@@ -3,7 +3,7 @@ import db from '../index.js';
 
 const responseSchema = mongoose.Schema({
   user_email: String,
-  response: String
+  response_body: String
 });
 
 const Response = mongoose.model('response', responseSchema);
