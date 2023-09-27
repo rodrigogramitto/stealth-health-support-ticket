@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
+import db from '../index.js';
 
-const ticketSchema = new mongoose.Schema({
+const ticketSchema = mongoose.Schema({
   name: String,
   email: String,
   subject: String,
@@ -8,6 +9,6 @@ const ticketSchema = new mongoose.Schema({
   description: String
 });
 
-const Ticket = mongoose.model('Ticket', ticketSchema);
+const Ticket = mongoose.model('ticket', ticketSchema);
 
 export default Ticket;

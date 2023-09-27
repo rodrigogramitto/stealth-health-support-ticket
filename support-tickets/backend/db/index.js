@@ -1,10 +1,11 @@
 import mongoose from 'mongoose';
 import 'dotenv/config';
 
-const cloud_db = process.env.DB_CONNECTION_STRING;
+const cloud_db = 'mongodb+srv://stealth:stealth123@cluster0.zse41nb.mongodb.net/?retryWrites=true&w=majority';
 
 // eslint-disable-next-line no-undef
-mongoose.connect('mongodb://localhost:27017/tickets');
+// mongoose.connect('mongodb://localhost:27017/tickets');
+mongoose.connect(cloud_db);
 
 const db = mongoose.connection;
 
