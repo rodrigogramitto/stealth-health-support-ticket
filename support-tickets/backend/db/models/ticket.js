@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const ticketSchema = mongoose.Schema({
+const ticketSchema = new mongoose.Schema({
   name: String,
   email: String,
   subject: String,
