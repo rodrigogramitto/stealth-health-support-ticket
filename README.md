@@ -6,6 +6,10 @@ Certainly, here's a basic README for your support ticket management project:
 
 This project is a basic "help desk" / support system ticket management system, developed as a coding exercise for a stealth healthcare startup. It allows end users to submit support ticket requests and provides support staff with an admin panel to manage and respond to tickets.
 
+## Demo Gif
+
+![Demo GIF](support-ticket-demo-hd (1).gif
+
 ## Quick Wireframe
 
 ![Alt Text](stealth-health.png)
