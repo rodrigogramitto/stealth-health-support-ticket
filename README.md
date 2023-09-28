@@ -8,7 +8,7 @@ This project is a basic "help desk" / support system ticket management system, d
 
 ## Quick Wireframe
 
-![Alt Text](dist/assets/stealth-health.png)
+![Alt Text](stealth-health.png)
 
 
 ## Features
