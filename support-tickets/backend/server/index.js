@@ -14,10 +14,10 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = 3000;
 
-app.use(express.static(path.join(__dirname, 'dist')));
 app.use(morgan("tiny"));
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.resolve(__dirname, '../../dist')));
 
 //Routes
 app.use(Router);
