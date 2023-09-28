@@ -24,7 +24,7 @@ const Ticket = ({ticket, changeView}) => {
 
     axios.put('http://localhost:3000/ticket', ticket)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         // updateStatus(res);
       })
       .catch((err) => {
@@ -36,7 +36,7 @@ const Ticket = ({ticket, changeView}) => {
       response_body: responseBody,
     })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
       })
       .catch((err) => {
         console.error(err);
