@@ -8,7 +8,7 @@ This project is a basic "help desk" / support system ticket management system, d
 
 ## Demo Gif
 
-![Demo GIF](support-ticket-demo-hd (1).gif
+support-ticket-demo-hd (1).gif
 
 ## Quick Wireframe
 
