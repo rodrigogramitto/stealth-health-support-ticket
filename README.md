@@ -6,6 +6,9 @@ Certainly, here's a basic README for your support ticket management project:
 
 This project is a basic "help desk" / support system ticket management system, developed as a coding exercise for a stealth healthcare startup. It allows end users to submit support ticket requests and provides support staff with an admin panel to manage and respond to tickets.
 
+## Demo GIF
+
+![Demo GIF](support-ticket-demo-hd (1).gif)
 ## Quick Wireframe
 
 ![Alt Text](stealth-health.png)
@@ -63,9 +66,14 @@ This project is a basic "help desk" / support system ticket management system, d
    npm run dev
    ```
 
-2. Open your browser and navigate to `http://localhost:3000` to access the end user interface.
+2. Start the API Server
+    ```bash
+   npm run server
+   ```
 
-3. Access the admin panel by going to `http://localhost:3000/admin`. Here, support staff can manage and respond to support tickets.
+3. Open your browser and navigate to `http://localhost:5173` to access the end user interface.
+
+4. Access the admin panel by going to `http://localhost:5173/admin`. Here, support staff can manage and respond to support tickets.
 
 ## Build for Production
 
