@@ -15,7 +15,7 @@ const SubmitButton = ({ name, email, subject, description, changeView}) => {
 
     console.log('Would normally send email here with body: NEW TICKET', newTicket)
 
-    axios.post('http://localhost:3000/ticket', newTicket)
+    axios.post('/ticket', newTicket)
     .then(() => {
       changeView(1)
     })

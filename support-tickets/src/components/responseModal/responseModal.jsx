@@ -21,7 +21,7 @@ const ResponseModal = ({ localTicket, updateStatus }) => {
     console.log(`Would normally send email here with body: Ticket Status: ${status}, `, responseBody);
     localTicket.status = status;
 
-    axios.put('http://localhost:3000/ticket', localTicket)
+    axios.put('/ticket', localTicket)
       .then((res) => {
         console.log(res);
         // updateStatus(res);
@@ -30,7 +30,7 @@ const ResponseModal = ({ localTicket, updateStatus }) => {
         console.error(err);
       });
 
-    axios.post('http://localhost:3000/response', {
+    axios.post('/response', {
       user_email: localTicket.email,
       response_body: responseBody,
     })

@@ -22,7 +22,7 @@ const Ticket = ({ticket, changeView}) => {
     console.log(`Would normally send email here with body: Ticket Status: ${status}, `, responseBody);
     ticket.status = status;
 
-    axios.put('http://localhost:3000/ticket', ticket)
+    axios.put('/ticket', ticket)
       .then((res) => {
         // console.log(res);
         // updateStatus(res);
@@ -31,7 +31,7 @@ const Ticket = ({ticket, changeView}) => {
         console.error(err);
       });
 
-    axios.post('http://localhost:3000/response', {
+    axios.post('/response', {
       user_email: ticket.email,
       response_body: responseBody,
     })

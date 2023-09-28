@@ -7,7 +7,7 @@ const AdminPage = ({ changeView }) => {
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/tickets')
+    axios.get('/tickets')
     .then((res) => {
       setTickets(res.data)
     })
