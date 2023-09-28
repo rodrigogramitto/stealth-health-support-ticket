@@ -18,7 +18,7 @@ const Ticket = ({ticket, changeView}) => {
   };
 
   const handleClick = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     console.log(`Would normally send email here with body: Ticket Status: ${status}, `, responseBody);
     ticket.status = status;
 
