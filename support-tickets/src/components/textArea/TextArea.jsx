@@ -1,6 +1,6 @@
 import react from 'react';
 
-const TextArea = ({ updateResponseBody}) => {
+const TextArea = ({ updateResponseBody }) => {
 
   const handleChange = (e) => {
     updateResponseBody(e.target.value);

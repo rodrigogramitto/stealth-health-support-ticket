@@ -16,20 +16,20 @@ const AdminPage = ({ changeView }) => {
     })
   }, [])
 
-  const updateTickets = () => {
-    axios.get('http://localhost:3000/tickets')
-    .then((res) => {
-      setTickets(res.data)
-    })
-    .catch((err) => {
-      console.error(err)
-    })
-  }
+  // const updateTickets = () => {
+  //   axios.get('http://localhost:3000/tickets')
+  //   .then((res) => {
+  //     setTickets(res.data)
+  //   })
+  //   .catch((err) => {
+  //     console.error(err)
+  //   })
+  // }
 
   const renderTickets = () => {
     if (tickets) {
       return tickets.map((ticket) => {
-        return (<Ticket key={ticket.id} ticket={ticket} updateTickets={updateTickets} />);
+        return (<Ticket key={ticket.id} ticket={ticket} changeView={changeView} />);
       });
     }
     // Return null or an empty array if there are no tickets

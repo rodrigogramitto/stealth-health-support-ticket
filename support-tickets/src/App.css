@@ -67,7 +67,7 @@
 /* admin page */
 
 #ticket-list {
-  margin-top:25%;
+  margin-top:15%;
 }
 
 .ticket-list-title {
@@ -90,6 +90,10 @@
 
 .modal-btn {
   background-color: rgb(117, 182, 117);
+}
+
+.select {
+  margin-right: 1%;
 }
 
 .btn {
