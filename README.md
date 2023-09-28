@@ -57,10 +57,10 @@ This project is a basic "help desk" / support system ticket management system, d
 
 ## Usage
 
-1. Start the development server:
+1. Start the server:
 
    ```bash
-   npm run dev
+   npm run server
    ```
 
 2. Open your browser and navigate to `http://localhost:3000` to access the end user interface.
