@@ -6,9 +6,10 @@ Certainly, here's a basic README for your support ticket management project:
 
 This project is a basic "help desk" / support system ticket management system, developed as a coding exercise for a stealth healthcare startup. It allows end users to submit support ticket requests and provides support staff with an admin panel to manage and respond to tickets.
 
-## Demo GIF
+## Demo Gif
 
-![Demo GIF](support-ticket-demo-hd (1).gif)
+![support-ticket-gif](https://github.com/rodrigogramitto/stealth-health-support-ticket/assets/121966377/3a46cc1d-45fc-4f0c-a31c-331f4cbe1fbe)
+
 ## Quick Wireframe
 
 ![Alt Text](stealth-health.png)
@@ -60,10 +61,10 @@ This project is a basic "help desk" / support system ticket management system, d
 
 ## Usage
 
-1. Start the development server:
+1. Start the server:
 
    ```bash
-   npm run dev
+   npm run server
    ```
 
 2. Start the API Server
