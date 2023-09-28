@@ -8,8 +8,7 @@ This project is a basic "help desk" / support system ticket management system, d
 
 ## Demo Gif
 
-![support-ticket-demo-hd (1)](https://github.com/rodrigogramitto/stealth-health-support-ticket/assets/121966377/632e4eea-72f7-4321-b5f3-510a13fc2608)
-
+![support-ticket-gif](https://github.com/rodrigogramitto/stealth-health-support-ticket/assets/121966377/3a46cc1d-45fc-4f0c-a31c-331f4cbe1fbe)
 
 ## Quick Wireframe
 
