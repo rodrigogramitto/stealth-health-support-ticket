@@ -17,7 +17,8 @@ Router.post('/ticket', (req, res) => {
 // update ticket route
 Router.put('/ticket', (req, res) => {
   const ticket = req.body;
-  Controller.updateTicketStatus({name: ticket.name, status: ticket.status})
+  console.log(ticket);
+  Controller.updateTicketStatus({subject: ticket.subject, status: ticket.status})
     .then((updated) => {
       res.send(updated)
     })
@@ -50,7 +51,6 @@ Router.get('/ticket', (req, res) => {
 
 // post response route
 Router.post('/response', (req, res) => {
-  console.log(req.body),
   Controller.saveResponse(req.body)
     .then((response) => {
       res.send(response);

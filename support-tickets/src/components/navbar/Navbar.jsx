@@ -18,14 +18,14 @@ import react from 'react';
         <ul className="menu menu-horizontal px-1">
           <li onClick={goToAdmin}><a>ADMIN</a></li>
           <li>
-            <details>
+            {/* <details>
               <summary>
                 Parent
               </summary>
               <ul className="p-2 bg-base-100">
                 <li onClick={handleClick}><a>New Ticket</a></li>
               </ul>
-            </details>
+            </details> */}
           </li>
         </ul>
       </div>

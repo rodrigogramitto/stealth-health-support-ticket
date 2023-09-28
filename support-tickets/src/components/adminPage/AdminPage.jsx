@@ -1,7 +1,9 @@
 import react, {useEffect, useState} from 'react';
 import axios from 'axios';
+import ResponseModal from '../responseModal/responseModal.jsx';
+import Ticket from '../ticket/ticket.jsx';
 
-const AdminPage = () => {
+const AdminPage = ({ changeView }) => {
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
@@ -14,21 +16,20 @@ const AdminPage = () => {
     })
   }, [])
 
+  const updateTickets = () => {
+    axios.get('http://localhost:3000/tickets')
+    .then((res) => {
+      setTickets(res.data)
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+  }
+
   const renderTickets = () => {
     if (tickets) {
       return tickets.map((ticket) => {
-        console.log(ticket);
-        return (
-          <div key={ticket.id} className="collapse collapse-plus bg-base-200">
-            <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
-              {ticket.subject}
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-        );
+        return (<Ticket key={ticket.id} ticket={ticket} updateTickets={updateTickets} />);
       });
     }
     // Return null or an empty array if there are no tickets

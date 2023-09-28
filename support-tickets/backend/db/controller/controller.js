@@ -13,7 +13,7 @@ const Controller = {
 
   updateTicketStatus: async (ticket) => {
     try {
-      const updated = await Ticket.findOneAndUpdate({name: ticket.name}, {status: ticket.status}, {
+      const updated = await Ticket.findOneAndUpdate({subject: ticket.subject}, {status: ticket.status}, {
         new: true
       })
       return updated;

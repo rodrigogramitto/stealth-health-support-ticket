@@ -14,7 +14,7 @@ function App() {
     } else if (view  === 1) {
       return <h1>Your Ticket has been submitted</h1>
     } else if (view === 2) {
-      return <AdminPage />
+      return <AdminPage changeView={changeView}/>
     }
   }
 
